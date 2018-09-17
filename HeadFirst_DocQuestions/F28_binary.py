@@ -29,7 +29,7 @@ for val in range(0,limit):
 print("The array is : " ,arr)
 
 num = int(input("enter the number  : "))
-result = Bubble(arr,0,len(arr),num)
+result = Bubble(arr,0,len(arr)-1,num)
 
 if(result !=-1):
     print("The number is present at %d " %result)
