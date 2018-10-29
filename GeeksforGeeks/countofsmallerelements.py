@@ -4,7 +4,7 @@ def smaller_elements(arr):
 
     for vals in arr:
 
-        if(vals>=number):
+        if(vals<number):
             count+=1
 
     return count
