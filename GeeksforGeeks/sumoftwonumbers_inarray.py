@@ -9,7 +9,7 @@ def sumofnumbers(arr):
                 count+=1
     return count
 
-sum = 9
+sum = 8
 
 arr = [1,2,3,4,5,6,7,8]
 
