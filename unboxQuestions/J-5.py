@@ -23,7 +23,6 @@ class emp:
     def getRollNumber(s):
         return s.Roll_number
 
-
 eo = []
 s = int(input('enter the strength of the class  '))
 
@@ -36,4 +35,3 @@ sid = input('enter id to search :')
 for i in eo:
     if i.getRollNumber() == sid:
         i.disp()
-print("Thanks for your time",end="\n\n")
