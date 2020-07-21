@@ -16,3 +16,8 @@ def columns(lines):
     return name,country
 
 data = sparkcont.textFile("/Users/sahilnagpal/PycharmProjects/Python/Pyspark/InputData/airports.text")
+notInAmerica = data.map(columns).filter(lambda country : country != "\"United States\"").take(200)
+
+
+for name , country in notInAmerica:
+    print("{}  , {} ".format(name , country))
