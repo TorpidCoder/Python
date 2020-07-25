@@ -11,3 +11,4 @@ heights = [1,1,4,2,1,3]
 newarr = sorted(heights)
 print(len([index for index, (e1, e2) in enumerate(zip(heights, newarr)) if e1 != e2]))
 
+print("Test")
