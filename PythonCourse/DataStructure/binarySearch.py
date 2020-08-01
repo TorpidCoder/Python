@@ -19,8 +19,23 @@ def BinarySearch(arr,low,high,number):
         return -1
 
 
+def quickSort(arr):
+    pivot = arr.pop()
+    lower = []
+    higher = []
+
+    for values in arr:
+        if(values > pivot):
+            higher.append(values)
+        else:
+            lower.append(values)
+    return quickSort(lower) + [pivot] + quickSort(higher)
+
+
+
 
 arr=[]
+
 
 limit = int(input("Please enter the limit : "))
 
@@ -28,6 +43,7 @@ for values in range(0,limit):
 
     arr.append(int(input("Please enter the number : ")))
 
+arr = quickSort(arr)
 print(arr)
 
 

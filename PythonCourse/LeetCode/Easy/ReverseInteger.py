@@ -15,8 +15,10 @@ __author__ = "ResearchInMotion"
 # Input: 120
 # Output: 21
 
-number = int(input("Please enter the number : "))
-number = str(number)
-reversenumber = number[::-1]
-reversenumber = int(reversenumber)
-print(reversenumber)
+number = input("Please enter the number : ")
+number = [values for values in str(number)]
+if '-' in number:
+    newnumber = int('-' + "".join(number[:0:-1]))
+else:
+    newnumber = int("".join(number[::-1]))
+print(newnumber)
