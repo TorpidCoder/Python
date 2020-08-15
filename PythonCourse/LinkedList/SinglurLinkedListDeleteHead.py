@@ -17,6 +17,12 @@ class LinkedList:
         self.head.next = tempNode
         del tempNode
 
+    def isListEmpty(self):
+        if self.head is None:
+            return True
+        else:
+            return False
+
     def lengthLinkedList(self):
         currentNode = self.head
         length = 0
@@ -60,16 +66,40 @@ class LinkedList:
             currentNode = currentNode.next
             currentPosition +=1
 
+    def deleteEnd(self):
+        if self.isListEmpty() is False:
+            lastNode = self.head
+            while lastNode.next is not None:
+                previousNode = lastNode
+                lastNode = lastNode.next
+            previousNode.next = None
+        else:
+            print("Linked List is Empty , The Delete will Fail")
+
+    def deleteHead(self):
+        if self.isListEmpty() is False:
+            previousHead = self.head
+            self.head = self.head.next
+            previousHead.next = None
+        else:
+            print("Linked List is Empty , The Delete will Fail")
+
+
+
+
 
 firstNode = Node(10)
 linkedList = LinkedList()
-linkedList.insertEnd(firstNode)
+#linkedList.insertEnd(firstNode)
 secondNode = Node(20)
 linkedList.insertEnd(secondNode)
 thirdNode = Node(15)
-linkedList.insertAt(thirdNode,1)
+#linkedList.insertAt(thirdNode,1)
 linkedList.printList()
 print(linkedList.lengthLinkedList())
+linkedList.deleteEnd()
+print(linkedList.lengthLinkedList())
+
 
 
 

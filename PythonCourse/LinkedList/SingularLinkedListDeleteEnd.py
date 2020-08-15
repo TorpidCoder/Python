@@ -60,6 +60,14 @@ class LinkedList:
             currentNode = currentNode.next
             currentPosition +=1
 
+    def deleteEnd(self):
+        lastNode = self.head
+        while lastNode.next is not None:
+            previousNode = lastNode
+            lastNode = lastNode.next
+        previousNode.next = None
+
+
 
 firstNode = Node(10)
 linkedList = LinkedList()
@@ -70,6 +78,9 @@ thirdNode = Node(15)
 linkedList.insertAt(thirdNode,1)
 linkedList.printList()
 print(linkedList.lengthLinkedList())
+linkedList.deleteEnd()
+print(linkedList.lengthLinkedList())
+
 
 
 
