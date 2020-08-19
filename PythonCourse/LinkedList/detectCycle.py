@@ -1,6 +1,6 @@
 __author__ = "ResearchInMotion"
 
-from PythonCourse.LinkedList.singularLinkedList import Node , LinkedList
+from PythonCourse.LinkedList.SingleLinkedList import Node , LinkedList
 
 class newNode(Node):
     def __init__(self,data):
@@ -18,13 +18,14 @@ def detectCycle(linkedList):
         currentNode.isVisited = True
 
 
-firstNode1 = Node("Krishna")
-secondNode2 = Node("Ram")
-thirdNode3 = Node("Balram")
+
+nodeone = newNode("John")
+nodetwo = newNode("Ben")
+nodethree = newNode("Matthew")
 linkedList = LinkedList()
-linkedList.insert(firstNode1)
-linkedList.insert(secondNode2)
-linkedList.insert(thirdNode3)
-thirdNode3.next = secondNode2
+linkedList.insert(nodeone)
+linkedList.insert(nodetwo)
+linkedList.insert(nodethree)
+nodethree.next = nodetwo
 detectCycle(linkedList)
-linkedList.printlist()
+linkedList.printList()
